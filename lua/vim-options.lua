@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-
+vim.o.showmode = false
 -- buffer and aplist navigation
 local function set_mappings()
 	local opts = { noremap = true }
@@ -52,6 +52,8 @@ set_options()
 
 -- Other configs
 vim.opt.guicursor = "n-v-c:block,o:hor50,i-ci:ver25,r-cr:hor20,a:blinkwait700-blinkon400-blinkoff250,sm:block-iCursor"
+vim.opt.cursorline = true
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1f2b" })
 vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "#ffffff" })
 
 -- keymaps

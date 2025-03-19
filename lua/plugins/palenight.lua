@@ -1,8 +1,12 @@
 return {
-	'wilmanbarrios/palenight.nvim',
-  priority = 1000,
-	lazy = false,
-	config = function()
-		vim.cmd.colorscheme("palenight")
-	end,
+  {
+    'wilmanbarrios/palenight.nvim',
+    lazy = false,
+    name = "palenight",
+    priority = 1000,
+
+    config = function()
+		  vim.cmd.colorscheme("palenight")
+	  end,
+  }
 }
