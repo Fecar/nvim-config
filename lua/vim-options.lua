@@ -4,13 +4,13 @@ vim.o.showmode = false
 local function set_mappings()
   local opts = { noremap = true }
   local mappings = {
-    { "n", "<leader>h", "<Cmd>wincmd h<CR>", opts },
-    { "n", "<leader>j", "<Cmd>wincmd j<CR>", opts },
-    { "n", "<leader>k", "<Cmd>wincmd k<CR>", opts },
-    { "n", "<leader>l", "<Cmd>wincmd l<CR>", opts },
-    { "n", "<leader>q", "<Cmd>wincmd c<CR>", opts },
-    { "n", "<leader>z", "<Cmd>bp<CR>",       opts },
-    { "n", "<leader>x", "<Cmd>bn<CR>",       opts },
+    { "n", "<C-h>", "<Cmd>wincmd h<CR>", opts },
+    { "n", "<C-j>", "<Cmd>wincmd j<CR>", opts },
+    { "n", "<C-k>", "<Cmd>wincmd k<CR>", opts },
+    { "n", "<C-l>", "<Cmd>wincmd l<CR>", opts },
+    { "n", "<leader>q", "<Cmd>bdelete<CR>", opts },
+    { "n", "<S-h>", "<Cmd>bp<CR>",       opts },
+    { "n", "<S-l>", "<Cmd>bn<CR>",       opts },
     { "n", "<C-s>", "<Cmd>wa<CR>", opts },
     { "v", "<C-s>", "<Cmd>wa<CR>", opts },
     { "n", "<C-q>", "<Cmd>qa!<CR>", opts },
@@ -53,10 +53,4 @@ end
 
 set_mappings()
 set_options()
-
--- Other configs
-vim.opt.guicursor = "n-v-c:block,o:hor50,i-ci:ver25,r-cr:hor20,a:blinkwait700-blinkon400-blinkoff250,sm:block-iCursor"
-vim.opt.cursorline = true
-vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1f2b" })
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff" })
 
