@@ -11,6 +11,10 @@ local function set_mappings()
     { "n", "<leader>q", "<Cmd>wincmd c<CR>", opts },
     { "n", "<leader>z", "<Cmd>bp<CR>",       opts },
     { "n", "<leader>x", "<Cmd>bn<CR>",       opts },
+    { "n", "<C-s>", "<Cmd>wa<CR>", opts },
+    { "v", "<C-s>", "<Cmd>wa<CR>", opts },
+    { "n", "<C-q>", "<Cmd>qa!<CR>", opts },
+    { "v", "<C-q>", "<Cmd>qa!<CR>", opts },
   }
 
   for _, val in pairs(mappings) do
@@ -54,10 +58,5 @@ set_options()
 vim.opt.guicursor = "n-v-c:block,o:hor50,i-ci:ver25,r-cr:hor20,a:blinkwait700-blinkon400-blinkoff250,sm:block-iCursor"
 vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1f2b" })
-vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "#ffffff" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff" })
 
--- keymaps
-vim.keymap.set("n", "<C-s>", ":wa<CR>", {})
-vim.keymap.set("v", "<C-s>", ":wa<CR>", {})
-vim.keymap.set("n", "<C-q>", ":qa!<CR>", {})
-vim.keymap.set("v", "<C-q>", ":qa!<CR>", {})
