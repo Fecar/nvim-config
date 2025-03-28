@@ -15,6 +15,7 @@ local function set_mappings()
     { "v", "<C-s>", "<Cmd>wa<CR>", opts },
     { "n", "<C-q>", "<Cmd>qa!<CR>", opts },
     { "v", "<C-q>", "<Cmd>qa!<CR>", opts },
+    { "n", "<C-a>", "ggVG", opts },
   }
 
   for _, val in pairs(mappings) do
