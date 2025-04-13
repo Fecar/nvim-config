@@ -20,7 +20,7 @@ return {
 						},
 						background = {
 							fg = { attribute = "fg", highlight = "Normal" },
-							bg = { attribute = "bg", highlight = "StatusLine" },
+							bg = { attribute = "bg", highlight = "Normal" },
 						},
 						buffer_visible = {
 							fg = { attribute = "fg", highlight = "Normal" },
@@ -28,7 +28,7 @@ return {
 						},
 						buffer_selected = {
 							fg = { attribute = "fg", highlight = "Normal" },
-							bg = { attribute = "bg", highlight = "Normal" },
+							bg = { attribute = "bg", highlight = "NormalNC" },
 						},
 						separator = {
 							fg = { attribute = "bg", highlight = "Normal" },
