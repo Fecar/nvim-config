@@ -7,6 +7,9 @@ return {
 		require("vscode").setup({
 			transparent = false,
 			italic_comments = false,
+      color_overrides = {
+        vscSelection = '#696969',
+      },
 			group_overrides = {
 				MatchParen = { fg = "#ffff00", bold = true },
         Cursor = { fg=c.vsDarkBlue, bg=c.vscLightGreen, bold=true }
