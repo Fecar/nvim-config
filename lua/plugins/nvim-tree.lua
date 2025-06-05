@@ -6,7 +6,11 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    require("nvim-tree").setup({})
+    require("nvim-tree").setup({
+      view = {
+        width = 40,
+      },
+    })
     vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {})
   end,
 }
