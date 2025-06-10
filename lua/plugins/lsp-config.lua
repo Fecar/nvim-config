@@ -23,7 +23,6 @@ return {
         automatic_enable = true,
       })
     end,
-
   },
   {
     "neovim/nvim-lspconfig",

@@ -4,9 +4,9 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'vscode',
-        --component_separators = {left = '', right = ''},
-        --section_separators = {left = '', right = ''},
+        theme = 'auto',
+        component_separators = {left = '', right = ''},
+        section_separators = {left = '', right = ''},
       }
     })
   end
