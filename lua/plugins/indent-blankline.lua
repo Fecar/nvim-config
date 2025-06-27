@@ -13,7 +13,7 @@ return {
       --"RainbowDelimiterCyan",
       --}
       require("ibl").setup({
-        debounce = 100,
+        debounce = 150,
         whitespace = {
           highlight = { "Whitespace", "NonText"},
           remove_blankline_trail = false,
@@ -21,7 +21,7 @@ return {
         scope = { enabled = false },
         indent = {
           --highlight = highlight,
-          --char = "▏",
+          --char = "|",
           --char = ":",
         },
       })

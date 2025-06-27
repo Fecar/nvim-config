@@ -4,8 +4,8 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'auto',
-        component_separators = {left = '', right = ''},
+        theme = 'lackluster',
+        component_separators = {right = '::'},
         section_separators = {left = '', right = ''},
       }
     })
