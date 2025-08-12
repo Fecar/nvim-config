@@ -9,8 +9,12 @@ return {
     require("nvim-tree").setup({
       view = {
         width = 40,
+        --side = "right",
+        float = {
+          enable = false,
+        }
       },
     })
-    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {})
+    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
   end,
 }

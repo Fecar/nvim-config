@@ -4,18 +4,22 @@ vim.o.showmode = false
 local function set_mappings()
   local opts = { noremap = true }
   local mappings = {
-    { "n", "<C-h>", "<Cmd>wincmd h<CR>", opts },
-    { "n", "<C-j>", "<Cmd>wincmd j<CR>", opts },
-    { "n", "<C-k>", "<Cmd>wincmd k<CR>", opts },
-    { "n", "<C-l>", "<Cmd>wincmd l<CR>", opts },
-    { "n", "<leader>q", "<Cmd>bdelete<CR>", opts },
-    { "n", "<S-h>", "<Cmd>bp<CR>",       opts },
-    { "n", "<S-l>", "<Cmd>bn<CR>",       opts },
-    { "n", "<C-s>", "<Cmd>wa<CR>", opts },
-    { "v", "<C-s>", "<Cmd>wa<CR>", opts },
-    { "n", "<C-q>", "<Cmd>qa!<CR>", opts },
-    { "v", "<C-q>", "<Cmd>qa!<CR>", opts },
-    { "n", "<C-a>", "ggVG", opts },
+    { "n", "<C-h>",     "<Cmd>wincmd h<CR>",  opts },
+    { "n", "<C-j>",     "<Cmd>wincmd j<CR>",  opts },
+    { "n", "<C-k>",     "<Cmd>wincmd k<CR>",  opts },
+    { "n", "<C-l>",     "<Cmd>wincmd l<CR>",  opts },
+    { "n", "<leader>q", "<Cmd>bdelete<CR>",   opts },
+    { "t", "<C-h>",     "<Cmd>wincmd h<CR>",  opts },
+    { "t", "<C-j>",     "<Cmd>wincmd j<CR>",  opts },
+    { "t", "<C-k>",     "<Cmd>wincmd k<CR>",  opts },
+    { "t", "<C-l>",     "<Cmd>wincmd l<CR>",  opts },
+    { "n", "<S-h>",     "<Cmd>bprevious<CR>", opts },
+    { "n", "<S-l>",     "<Cmd>bNext<CR>",     opts },
+    { "n", "<C-s>",     "<Cmd>wa<CR>",        opts },
+    { "v", "<C-s>",     "<Cmd>wa<CR>",        opts },
+    { "n", "<C-q>",     "<Cmd>qa!<CR>",       opts },
+    { "v", "<C-q>",     "<Cmd>qa!<CR>",       opts },
+    { "n", "<C-a>",     "ggVG",               opts },
   }
 
   for _, val in pairs(mappings) do
@@ -54,4 +58,3 @@ end
 
 set_mappings()
 set_options()
-

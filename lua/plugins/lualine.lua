@@ -7,6 +7,7 @@ return {
         theme = 'lackluster',
         component_separators = {right = '::'},
         section_separators = {left = '', right = ''},
+        disabled_filetypes = {"NvimTree", "Oil"},
       }
     })
   end
