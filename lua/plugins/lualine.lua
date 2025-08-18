@@ -4,7 +4,7 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'lackluster',
+        theme = 'auto',
         component_separators = {right = '::'},
         section_separators = {left = '', right = ''},
         disabled_filetypes = {"NvimTree", "Oil"},
