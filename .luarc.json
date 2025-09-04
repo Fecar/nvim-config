@@ -1,9 +1,11 @@
 {
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "default_capabilities"
     ],
     "diagnostics.disable": [
         "unused-function",
-        "deprecated"
+        "deprecated",
+        "undefined-global"
     ]
 }
