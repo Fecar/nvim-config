@@ -9,6 +9,7 @@ return {
       ensure_installed = { "lua", "cpp", "c", "python" },
       highlight = { enable = true },
       indent = { enable = true },
+      folds = { enable = true },
     })
     local rainbow = require("rainbow-delimiters.setup")
     rainbow.setup({

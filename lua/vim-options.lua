@@ -19,7 +19,8 @@ local function set_mappings()
     { "v", "<C-s>",     "<Cmd>wa<CR>",        opts },
     { "n", "<C-q>",     "<Cmd>qa!<CR>",       opts },
     { "v", "<C-q>",     "<Cmd>qa!<CR>",       opts },
-    { "n", "<C-a>",     "ggVG",               opts },
+    -- { "n", "<C-a>",     "ggVG",               opts },
+    { "n", "<leader>v", "<C-v>",              { noremap = true, desc = "Visual Block" } },
   }
 
   for _, val in pairs(mappings) do
@@ -32,8 +33,8 @@ local function set_options()
     ruler = true,
     number = true,
     relativenumber = true,
-    foldmethod = "indent",
-    foldlevel = 20,
+    -- foldmethod = "indent",
+    -- foldlevel = 20,
     encoding = "utf-8",
     fileencoding = "utf-8",
     fileencodings = "utf-8",
