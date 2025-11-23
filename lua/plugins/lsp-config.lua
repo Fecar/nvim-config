@@ -40,24 +40,18 @@ return {
         }
       })
 
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
+      vim.lsp.config('*', {
+        cmd = { 'true' },
+        root_markers = { '.git' },
+        capabilities = {
+          textDocument = {
+            semanticTokens = {
+              multilineTokenSupport = true,
+            }
+          }
+        }
       })
-      lspconfig.clangd.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.pyright.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.html.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.cmake.setup({
-        capabilities = capabilities,
-      })
+      vim.lsp.enable({ 'lua_ls', 'pyright', 'cmake', 'clangd', 'html' })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "GoTo definition" })
