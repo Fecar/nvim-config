@@ -20,7 +20,9 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        automatic_enable = true,
+        ensure_installed = { 'lua_ls', 'pyright', 'cmake', 'clangd', 'html', 'ts_ls', 'volar' },
+        automatic_installation = true,
+        -- automatic_enable = true,
       })
     end,
   },
@@ -51,8 +53,31 @@ return {
           }
         }
       })
-      vim.lsp.enable({ 'lua_ls', 'pyright', 'cmake', 'clangd', 'html' })
+      
+      local mason_packages = vim.fn.stdpath("data") .. "/mason/packages"
+      local vue_plugin_path = mason_packages .. "/vue-language-server/node_modules/@vue/language-server"
+      
+      vim.lsp.config('ts_ls', {
+        init_options = {
+          plugins = {
+            {
+              name = "@vue/typescript-plugin",
+              location = vue_plugin_path,
+              languages = { "vue"},
+            },
+          },
+        },
+        filetypes = { "typescript", "javacript", "javascriptreact", "typescriptreact", "vue"}
+      })
 
+      vim.lsp.enable({ 'ts_ls' })
+      vim.lsp.enable({ 'vue_ls' })
+
+      local servers = { 'lua_ls', 'pyright', 'cmake', 'clangd', 'html' }
+
+      for _, lsp in ipairs(servers) do
+        vim.lsp.enable({ lsp })
+      end
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "GoTo definition" })
       vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "GoTo References" })
