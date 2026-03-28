@@ -23,6 +23,6 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "format buffer" })
+    -- vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "format buffer" })
   end,
 }
