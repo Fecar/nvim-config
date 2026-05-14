@@ -48,7 +48,6 @@ local function set_mappings()
 		-- { "n", "<C-p>",     "<Cmd>BufferPick<CR>",                { noremap = true, desc = "Buffer Pick" } },
 		-- { "n", "<C-s-p>",   "<Cmd>BufferPickDelete<CR>",          { noremap = true, desc = "Buffer Pick Delete" } },
 
-		-- Sort automatically by...
 		{
 			"n",
 			"<leader>bb",
@@ -93,9 +92,9 @@ local function set_options()
 		fileencodings = "utf-8",
 		backspace = "indent,eol,start",
 		smartindent = true,
-		tabstop = 2,
-		softtabstop = 2,
-		shiftwidth = 2,
+		tabstop = 4,
+		softtabstop = 4,
+		shiftwidth = 4,
 		expandtab = true,
 		smarttab = true,
 		clipboard = "unnamedplus",

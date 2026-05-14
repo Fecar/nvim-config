@@ -12,9 +12,9 @@ return {
         --side = "right",
         float = {
           enable = false,
-        }
+        },
       },
     })
-    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
+    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
   end,
 }

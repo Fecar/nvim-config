@@ -20,7 +20,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { 'lua_ls', 'pyright', 'cmake', 'clangd', 'html', 'ts_ls', 'volar' },
+        ensure_installed = { "lua_ls", "pyright", "cmake", "clangd", "html", "ts_ls", "volar" },
         automatic_installation = true,
         -- automatic_enable = true,
       })
@@ -34,46 +34,46 @@ return {
         virtual_text = true,
         signs = {
           text = {
-            [vim.diagnostic.severity.ERROR] = '',
-            [vim.diagnostic.severity.WARN] = '',
-            [vim.diagnostic.severity.INFO] = '',
-            [vim.diagnostic.severity.HINT] = '',
-          }
-        }
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.INFO] = "",
+            [vim.diagnostic.severity.HINT] = "",
+          },
+        },
       })
 
-      vim.lsp.config('*', {
-        cmd = { 'true' },
-        root_markers = { '.git' },
+      vim.lsp.config("*", {
+        cmd = { "true" },
+        root_markers = { ".git" },
         capabilities = {
           textDocument = {
             semanticTokens = {
               multilineTokenSupport = true,
-            }
-          }
-        }
+            },
+          },
+        },
       })
-      
+
       local mason_packages = vim.fn.stdpath("data") .. "/mason/packages"
       local vue_plugin_path = mason_packages .. "/vue-language-server/node_modules/@vue/language-server"
-      
-      vim.lsp.config('ts_ls', {
+
+      vim.lsp.config("ts_ls", {
         init_options = {
           plugins = {
             {
               name = "@vue/typescript-plugin",
               location = vue_plugin_path,
-              languages = { "vue"},
+              languages = { "vue" },
             },
           },
         },
-        filetypes = { "typescript", "javacript", "javascriptreact", "typescriptreact", "vue"}
+        filetypes = { "typescript", "javacript", "javascriptreact", "typescriptreact", "vue" },
       })
 
-      vim.lsp.enable({ 'ts_ls' })
-      vim.lsp.enable({ 'vue_ls' })
+      vim.lsp.enable({ "ts_ls" })
+      vim.lsp.enable({ "vue_ls" })
 
-      local servers = { 'lua_ls', 'pyright', 'cmake', 'clangd', 'html' }
+      local servers = { "lua_ls", "pyright", "cmake", "clangd", "html" }
 
       for _, lsp in ipairs(servers) do
         vim.lsp.enable({ lsp })
